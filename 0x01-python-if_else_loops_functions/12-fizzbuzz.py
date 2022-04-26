@@ -13,4 +13,4 @@ def fizzbuzz():
             print("{:d} ".format(n), end='')
         if (n == 100):
             continue
-    print("")
+    print("", end='')
