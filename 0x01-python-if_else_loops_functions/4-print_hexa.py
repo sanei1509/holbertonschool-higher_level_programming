@@ -2,4 +2,3 @@
 
 for n in range(0, 99):
     print(n, "= {}".format(hex(n)))
-	
