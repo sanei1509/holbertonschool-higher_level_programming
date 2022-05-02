@@ -2,5 +2,7 @@
 def element_at(my_list, idx):
     if (idx < 0 or idx > len(my_list)):
         return None
+    elif(len(my_list) == 0):
+        return None
     elif (type(my_list) is list):
         return my_list[idx]
