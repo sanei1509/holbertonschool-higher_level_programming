@@ -1,8 +1,11 @@
-#!/usr/bin/python3
+#!/ux_integer(matrix=[[]]):
 def print_matrix_integer(matrix=[[]]):
-    for columna in range(len(matrix[0])):
-        for fila in range(len(matrix[columna])):
-            print(matrix[columna][fila], end="")
-            if (fila < len(matrix[columna]) - 1):
-                print(" ", end="")
-        print()
+    for columna in matrix:
+        len_col = len(columna)
+        cont_fila = 0
+        for fila in columna:
+            print(f"{fila:d}", end='')
+            if cont_fila < (len_col - 1):
+                print(' ', end='')
+            cont_fila += 1
+        print("")
