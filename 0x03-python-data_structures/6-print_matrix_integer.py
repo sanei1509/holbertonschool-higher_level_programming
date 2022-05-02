@@ -1,4 +1,4 @@
-#!/ux_integer(matrix=[[]]):
+#!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     for columna in matrix:
         len_col = len(columna)
