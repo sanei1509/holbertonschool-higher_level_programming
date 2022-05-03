@@ -1,34 +1,36 @@
 #include "lists.h"
 
-node *reverse(node *head)   //reverse the string (second part)
+/**
+ * reverse - reverses linked list
+ * @nodo_medio: ptr to a center to the linked list
+ * Return: return head of a reversed list
+ */
+listint_t *reverse(listint_t *nodo_medio)
 {
-	node *p , *q;
-	if(head == NULL)
-	return head;
-	
-	p = head;
-	q = p->next;
-	
-	if(q == NULL)
-	return p;
-	q = reverse(q);
-	p->next-
+	listint_t *prev = NULL;
+	listint_t *curr = nodo_medio;
+	listint_t *next = NULL;
+
+	while (curr != NULL)
+	{
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+	}
+	return (prev);
+}
 
 /**
- *is_palindrom - function comprobe if a linked list is palindrome or not
+ *is_palindrome - function comprobe if a linked list is palindrome or not
  *@head: pointer to a point to first node
  *Return: 1 if is palindrome or 0 is not
  */
 
 int is_palindrome(listint_t **head)
 {
-	node *aux, *aux2;
-	
-	if (*head = NULL)
-	{
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	}
 
-	/*split*/
-        
+	return (0);
 }
