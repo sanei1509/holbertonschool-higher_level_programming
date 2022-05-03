@@ -5,20 +5,21 @@
  * @nodo_medio: ptr to a center to the linked list
  * Return: return head of a reversed list
  */
-listint_t *reverse(listint_t *nodo_medio)
+void reverse(listint_t **nodo_medio)
 {
 	listint_t *prev = NULL;
-	listint_t *curr = nodo_medio;
-	listint_t *next = NULL;
+	listint_t *current = *nodo_medio;
+	listint_t *next;
 
-	while (curr != NULL)
+	while (current != NULL)
 	{
-		next = curr->next;
-		curr->next = prev;
-		prev = curr;
-		curr = next;
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
 	}
-	return (prev);
+
+	*nodo_medio = prev;
 }
 
 /**
@@ -29,8 +30,43 @@ listint_t *reverse(listint_t *nodo_medio)
 
 int is_palindrome(listint_t **head)
 {
+	listint_t *slow_ptr = *head, *fast_ptr = *head;
+	listint_t *second_half, *prev_of_slow_ptr = *head;
+	listint_t *midnode = NULL;
+
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
 
+	else
+	{
+        	while (fast_ptr != NULL && fast_ptr->next != NULL)
+		{
+            		fast_ptr = fast_ptr->next->next;
+
+			prev_of_slow_ptr = slow_ptr;
+			slow_ptr = slow_ptr->next;
+		}
+		if (fast_ptr != NULL)
+		{
+			midnode = slow_ptr;
+			slow_ptr = slow_ptr->next;
+		
+        	}
+
+		second_half = slow_ptr;
+                prev_of_slow_ptr->next = NULL;
+                reverse(&second_half);
+		
+		reverse(&second_half);
+
+		if (midnode != NULL)
+		{
+			prev_of_slow_ptr->next = midnode;
+			midnode->next = second_half;
+		}
+		else
+			prev_of_slow_ptr->next = second_half;
+		return (1);
+	}
 	return (0);
 }
