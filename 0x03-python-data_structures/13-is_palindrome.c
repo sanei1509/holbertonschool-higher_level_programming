@@ -56,8 +56,6 @@ int is_palindrome(listint_t **head)
 		second_half = slow_ptr;
                 prev_of_slow_ptr->next = NULL;
                 reverse(&second_half);
-		
-		reverse(&second_half);
 
 		if (midnode != NULL)
 		{
