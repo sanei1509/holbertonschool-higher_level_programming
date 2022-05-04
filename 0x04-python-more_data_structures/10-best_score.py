@@ -8,5 +8,6 @@ def best_score(a_dictionary):
         if(a_dictionary[player] > biggest_value):
             biggest_value = a_dictionary[player]
             name_of_winner = player
+    if(biggest_value == 0):
+        return(None)
     return(name_of_winner)
-    return(None)
