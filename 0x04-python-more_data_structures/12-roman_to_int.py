@@ -1,18 +1,46 @@
-#!/usr/bin/python3
+#!/usr/bin/pyithon3
+
+
+def value(r):
+    if (r == 'I'):
+        return 1
+    if (r == 'V'):
+        return 5
+    if (r == 'X'):
+        return 10
+    if (r == 'L'):
+        return 50
+    if (r == 'C'):
+        return 100
+    if (r == 'D'):
+        return 500
+    if (r == 'M'):
+        return 1000
+    return -1
+
+
 def roman_to_int(roman_string):
     if (roman_string is not str or roman_string is None):
         return(0)
     if (roman_string == ""):
         return(0)
-    else:
-        roman = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000, 'IV': 4, 'IX': 9, 'XL': 40, 'XC': 90, 'CD': 400, 'CM': 900}
-        i = 0
-        res = 0
-        while (i < len(roman_string)):
-            if (i+1 < len(roman_string) and roman_string[i:i+2] in roman):
-                res += roman[roman_string[i:i+2]]
-                i += 2
+
+    res = 0
+    i = 0
+    while (i < len(str)):
+        s1 = value(str[i])
+
+        if (i + 1 < len(str)):
+            s2 = value(str[i + 1])
+
+            if (s1 >= s2):
+                res = res + s1
+                i = i + 1
             else:
-                res += roman[roman_string[i]]
-                i += 1
-        return res
+                res = res + s2 - s1
+                i = i + 2
+        else:
+            res = res + s1
+            i = i + 1
+
+    return res
