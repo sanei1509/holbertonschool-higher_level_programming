@@ -1,4 +1,4 @@
-#!/usr/bin/pyithon3
+#!/usr/bin/python3
 
 
 def value(r):
