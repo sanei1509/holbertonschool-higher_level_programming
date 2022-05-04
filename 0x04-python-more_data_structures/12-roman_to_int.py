@@ -16,7 +16,7 @@ def value(r):
         return 500
     if (r == 'M'):
         return 1000
-    return 0
+    return (0)
 
 
 def roman_to_int(roman_string):
@@ -29,7 +29,9 @@ def roman_to_int(roman_string):
     i = 0
     while (i < len(roman_string)):
         s1 = value(roman_string[i])
-
+        if(s1 == 0):
+            return(0)
+        
         if (i + 1 < len(roman_string)):
             s2 = value(roman_string[i + 1])
 
