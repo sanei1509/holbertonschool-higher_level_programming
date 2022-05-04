@@ -9,3 +9,4 @@ def best_score(a_dictionary):
             biggest_value = a_dictionary[player]
             name_of_winner = player
     return(name_of_winner)
+    return(None)
