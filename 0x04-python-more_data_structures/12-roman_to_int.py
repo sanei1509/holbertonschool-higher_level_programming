@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-def value(r):
+def symbols(r):
     if (r == 'I'):
         return 1
     if (r == 'V'):
@@ -24,11 +24,11 @@ def roman_to_int(roman_string):
     res = 0
     i = 0
     while (i < len(roman_string)):
-        s1 = value(roman_string[i])
+        s1 = symbols(roman_string[i])
         if s1 == 0:
             return 0
         if (i + 1 < len(roman_string)):
-            s2 = value(roman_string[i + 1])
+            s2 = symbols(roman_string[i + 1])
             if (s1 >= s2):
                 res = res + s1
                 i = i + 1
