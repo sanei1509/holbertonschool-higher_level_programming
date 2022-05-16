@@ -3,9 +3,9 @@ def safe_print_list(my_list=[], x=0):
     len = 0
     for element in my_list:
         try:
-            print(f"{element}", end='')
+            print(element, end='')
             len += 1
-        except IndexError:
+        except (TypeError, ValueError):
             break
     print()
     return len
