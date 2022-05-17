@@ -7,10 +7,8 @@ Define a square with content
 
 class Square():
     """
-    class with a private attribute
+    Instance attribute (private): size
+    size: def __init__(self, new_size=0)
     """
-    __size = None
-
-    def __init__(self, new_size=None):
-        self.__size = True
+    def __init__(self, new_size=0):
         self.__size = new_size
