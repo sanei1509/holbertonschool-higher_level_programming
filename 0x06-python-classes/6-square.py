@@ -1,0 +1,59 @@
+#!/usr/bin/python3
+"""
+class Square define a square for: 5-square.py
+"""
+
+
+class Square:
+    """
+    Instance attribute (private): size
+    size: def __init__(self, new_size=0):
+    @property(size) - def size(self): recuperar tamaño
+    @setter(size) def size(self, value): setear tamaño
+    @property(position) - def position(self): re
+    """
+
+    def __init__(self, size=0, position=(0, 0)):
+        """Initialize the square"""
+        self.__size = size
+        self.__position = position
+
+    @property
+    def size(self):
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        self.__size = value
+        if (type(value) != int):
+            raise TypeError("size must be an integer")
+        if (value < 0):
+            raise ValueError("size must be >= 0")
+
+    @property
+    def position(self):
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        self.__position = value
+        if (value[0] < 0 or value[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if (type(value[0]) != int or type(value[1]) != int):
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+    def area(self):
+        """return the area of the square"""
+        return (self.__size * self.__size)
+
+    def my_print(self):
+        """print the square depending of the size received"""
+        if (self.__size == 0):
+            print()
+        else:
+            for n in range(self.__size):
+                for s in range(self.__position[0]):
+                    print(' ', end="")
+                for y in range(self.__size):
+                    print('#', end="")
+                print()
