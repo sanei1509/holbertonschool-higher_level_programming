@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module 0-square.py
+Task 0-square.py
 Define a empty class of a square
 """
 
