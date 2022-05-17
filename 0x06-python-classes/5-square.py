@@ -34,7 +34,7 @@ class Square:
 
     def my_print(self):
         """print the square depending of the size received"""
-        if (self.__size < 0):
+        if (self.__size == 0):
             print()
         else:
             for n in range(self.__size):
