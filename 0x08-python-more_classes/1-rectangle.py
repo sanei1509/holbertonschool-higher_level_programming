@@ -5,7 +5,7 @@ Create two private instances attributes
 """
 
 
-class Rectangle():
+class Rectangle:
     """
     Attribute (private): width
     Attribute (private): height
