@@ -68,4 +68,4 @@ class Rectangle():
 
     def __repr__(self):
         """return in stdout a rectangle"""
-        return f"Rectangle({self.__height}, {self.__width})"
+        return f"Rectangle({self.__width}, {self.__height})"
