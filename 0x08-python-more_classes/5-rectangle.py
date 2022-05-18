@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Task 4-rectangle.py by (3-rectangle.py)
+Task 5-rectangle.py by (4-rectangle.py)
 Print a Rectangle
 """
 
