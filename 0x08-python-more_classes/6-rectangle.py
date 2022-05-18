@@ -5,7 +5,7 @@ Print a Rectangle
 """
 
 
-class Rectangle():
+class Rectangle:
     number_of_instances = 0
     """
     Attribute (private): width
