@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-class Square define a square for: 3-square.py
+class Square define a square for: 4-square.py
 """
 
 
@@ -31,3 +31,22 @@ class Square:
     def area(self):
         """return the area of the square"""
         return (self.__size * self.__size)
+
+    def __eq__(self, o_square):
+        """igual """
+        return self.area() == o_square.area()
+        """!igual"""
+    def __ne__(self, o_square):
+        return self.area() != o_square.area()
+        """mayor que ->"""
+    def __gt__(self, o_square):
+        return self.area() > o_square.area()
+        """mayor o igual que"""
+    def __ge__(self, o_square):
+        return self.area() >= o_square.area()
+        """menor que ->"""
+    def __lt__(self, o_square):
+        return self.area() < o_square.area()
+        """menor o igual que"""
+    def __le__(self, o_square):
+        return self.area() <= o_square.area()
