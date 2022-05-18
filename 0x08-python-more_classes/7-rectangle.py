@@ -71,9 +71,10 @@ class Rectangle():
 
     def __repr__(self):
         """return in stdout a rectangle"""
-        return f"Rectangle({self.__height}, {self.__width})"
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         "print a message when delete a class"
-        Rectangle.number_of_instances -= 1
+        if Rectangle.number_of_instances > 0:
+            Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
