@@ -19,4 +19,8 @@ At the end of this project, are expected to learn these concepts:
 -   What are the basic option flags to create tests
 -   How to find edge cases
 
+## Execution tests with this command:
+  ````
+  python3 -m doctest ./tests/*
+  ````
 
