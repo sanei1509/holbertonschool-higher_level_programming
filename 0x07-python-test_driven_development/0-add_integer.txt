@@ -1,3 +1,9 @@
+************************
+Test -> 0-add_integer.py
+========================
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
 >>> add_integer(5)
 Error : deberia recibir 2 valores (int/float, int/float)
 
