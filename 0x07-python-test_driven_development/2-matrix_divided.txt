@@ -1,0 +1,23 @@
+****************************
+Test -> 2-matrixt_divided.py
+============================
+
+>>> matrix_divided = __import__("matrix_divided").matrix_divided
+
+
+###Error to raise###
+
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+Traceback (most recent call last):
+TypeError: div must be a number
+
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
