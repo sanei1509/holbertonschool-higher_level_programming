@@ -4,13 +4,15 @@ Task 1 - matrix_divided(matrix, div):
 """
 def matrix_divided(matrix, div):
 """function that divide all the values of the matrix"""
+    res = []
+    if matrix is None:
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if len(matrix[0]) != len(matrix(1)):
+        raise TypeError("Each row of the matrix must have the same size")
+    if div = 0:
+        raise ZeroDivisionError("division by zero")
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-
-print matrix(matrix_divided(matrix, 3))
-
-"""EXPECTED"""
-[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+    for listas_valores in matrix:
+       for i in lista_valores:
+           if type(i)) != int and type(i) != float:
+               rais TypeError("matrix must be a matrix (list of lists) of integers/floats")
