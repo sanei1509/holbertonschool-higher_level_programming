@@ -9,5 +9,11 @@ def add_integer(a, b=98):
     if b != int or b != float:
         raise TypeError("b must be an integer")
     """asegurar que recibamos 2 argumentos siempre"""
-    if ()
+    if a == None or b == None:
+        raise TypeError("Few or too arguments")
     return a + b
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
