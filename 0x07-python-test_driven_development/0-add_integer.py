@@ -12,8 +12,3 @@ def add_integer(a, b=98):
     if a == None or b == None:
         raise TypeError("Few or too arguments")
     return a + b
-
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
