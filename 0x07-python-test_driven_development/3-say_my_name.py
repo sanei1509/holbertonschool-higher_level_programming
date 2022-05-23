@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Task 2: 3-say_my_name - function that print full name
+"""
+
+
 def say_my_name(first_name, last_name=""):
     """function that print complete name"""
     if type(first_name) != str:
