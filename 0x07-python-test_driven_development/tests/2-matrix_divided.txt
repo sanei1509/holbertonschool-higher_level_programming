@@ -54,3 +54,20 @@ TypeError: div must be a number
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
+
+=========Arguments Error========
+
+>>> matrix_divided([[1, 2], [1, 2]])
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided( , 8)
+Traceback (most recent call last):
+...
+SyntaxError: invalid syntax
+
+>>> matrix_divided([[1, 2], [1, 2]], 2, 2)
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() takes 2 positional arguments but 3 were given
