@@ -26,6 +26,7 @@ is?
 sdad aorus.
 <BLANKLINE>
 end
+
  
 ========Error cases==========
 >>> text_indentation(213312)
@@ -33,6 +34,15 @@ Traceback (most recent call last):
 ...
 TypeError: text must be a string
 
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(["había una vez un ave?"])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
 
 
 ========Arguments errors=====
@@ -40,7 +50,6 @@ TypeError: text must be a string
 Traceback (most recent call last):
 ...
 TypeError: text_indentation() takes 1 positional argument but 2 were given
-
 
 >>> text_indentation()
 Traceback (most recent call last):
