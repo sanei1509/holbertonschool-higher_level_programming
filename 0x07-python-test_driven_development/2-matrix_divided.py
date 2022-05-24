@@ -20,6 +20,8 @@ def matrix_divided(matrix, div):
     for listas in matrix:
         if type(listas) != list:
             raise TypeError(err_msg)
+        if len(listas) != len(matrix[0]):
+            raise TypeError("Each row of the matrix must have the same size")
         c_resList = []
         for valor in listas:
             if type(valor) != int and type(valor) != float:
