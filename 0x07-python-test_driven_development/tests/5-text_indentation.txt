@@ -1,0 +1,48 @@
+******************************
+Test ->  5-text_indentation.py
+==============================
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+=========Succes cases========
+>>> text_indentation("Lorem. ipsum: is? sdad aorus. end")
+Lorem.
+<BLANKLINE>
+ipsum:
+<BLANKLINE>
+is?
+<BLANKLINE>
+sdad aorus.
+<BLANKLINE>
+end
+
+>>> text_indentation(" Lorem.   ipsum: is? sdad aorus. end  ")
+Lorem.
+<BLANKLINE>
+ipsum:
+<BLANKLINE>
+is?
+<BLANKLINE>
+sdad aorus.
+<BLANKLINE>
+end
+ 
+========Error cases==========
+>>> text_indentation(213312)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+
+
+========Arguments errors=====
+>>> text_indentation("text_1", "text_2")
+Traceback (most recent call last):
+...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
