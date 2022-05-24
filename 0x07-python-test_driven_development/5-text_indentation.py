@@ -9,8 +9,11 @@ def text_indentation(text):
     """add text /n when ',' or ':'"""
     if type(text) != str:
         raise TypeError("text must be a string")
-
-    ind_text = text.replace(". ", ".\n\n")
-    ind_text2 = ind_text.replace("? ", "?\n\n")
-    last_text = ind_text2.replace(": ", ":\n\n")
-    print(last_text, end="")
+    texto = ""
+    elementos = [".", "?", ":"]
+    for i in text:
+        texto += i
+        if i in elementos:
+            print("{}\n".format(texto.strip()))
+            texto = ""
+    print("{}".format(texto.strip()))
