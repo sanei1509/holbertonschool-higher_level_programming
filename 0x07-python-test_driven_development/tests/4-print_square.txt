@@ -6,6 +6,9 @@ Test -> 4-print_square.py
 
 =======Succes cases=========
 
+>>> print_square(1)
+#
+
 >>> print_square(4)
 ####
 ####
