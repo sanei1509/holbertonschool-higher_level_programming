@@ -27,6 +27,15 @@ sdad aorus.
 <BLANKLINE>
 end
 
+>>> text_indentation("   Test     \n     ?     ")
+Test     
+     ?
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation("      Test      ")
+Test
+
 ========Error cases==========
 >>> text_indentation(-21)
 Traceback (most recent call last):
@@ -53,6 +62,10 @@ Traceback (most recent call last):
 ...
 TypeError: text must be a string
 
+>>> text_indentation([[1, 2, 3], [4, 5, 6.7]])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
 
 ========Arguments errors=====
 >>> text_indentation("text_1", "text_2")
