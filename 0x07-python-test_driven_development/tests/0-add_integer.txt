@@ -17,6 +17,14 @@ Test -> 0-add_integer.py
 >>> add_integer(10, -2)
 8
 
+>>> print(add_integer(-98))
+0
+
+>>> print(add_integer(0))
+98
+
+
+
 ========ERROR string passed==========
 >>> add_integer("num 20", 1002)
 Traceback (most recent call last):
