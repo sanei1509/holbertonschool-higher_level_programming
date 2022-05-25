@@ -23,6 +23,9 @@ Test -> 0-add_integer.py
 >>> print(add_integer(0))
 98
 
+>>> print(add_integer(2.5, 14))
+16
+
 
 
 ========ERROR string passed==========
