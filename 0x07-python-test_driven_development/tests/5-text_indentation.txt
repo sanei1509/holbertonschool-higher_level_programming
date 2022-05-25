@@ -27,8 +27,6 @@ sdad aorus.
 <BLANKLINE>
 end
 
->>> text_indentation("    ")
-
 ========Error cases==========
 >>> text_indentation(-21)
 Traceback (most recent call last):
