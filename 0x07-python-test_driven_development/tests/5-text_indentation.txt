@@ -77,3 +77,32 @@ TypeError: text_indentation() takes 1 positional argument but 2 were given
 Traceback (most recent call last):
 ...
 TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+
+========check fails (second chance)============
+
+        >>> text_indentation("This. is. a: test? Nope, or yep")
+	This.
+    	<BLANKLINE>
+    	is.
+	<BLANKLINE>
+	a:
+	<BLANKLINE>
+	test?
+	<BLANKLINE>
+	Nope, or yep
+
+
+
+        >>> text_indentation("   This.    is.   a:   test?       Nope,   or   yep")
+	This.
+    	<BLANKLINE>
+    	is.
+	<BLANKLINE>
+	a:
+	<BLANKLINE>
+	test?
+	<BLANKLINE>
+	Nope,   or   yep
+
+-----------------------------
