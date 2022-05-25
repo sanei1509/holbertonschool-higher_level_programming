@@ -29,6 +29,9 @@ Test -> 0-add_integer.py
 >>> print(add_integer(10))
 108
 
+>>> add_integer(2.939294, 10.31213)
+12
+
 ========ERROR string passed==========
 >>> add_integer("num 20")
 Traceback (most recent call last):
