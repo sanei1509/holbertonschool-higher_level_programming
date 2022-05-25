@@ -27,8 +27,19 @@ sdad aorus.
 <BLANKLINE>
 end
 
- 
+>>> text_indentation("    ")
+
 ========Error cases==========
+>>> text_indentation(-21)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(5.5)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
 >>> text_indentation(213312)
 Traceback (most recent call last):
 ...
