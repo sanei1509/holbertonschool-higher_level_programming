@@ -15,6 +15,12 @@ Test -> 2-matrixt_divided.py
 >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 2.5)
 [[0.4, 0.8, 1.2], [1.6, 2.0, 2.4]]
 
+>>> matrix_divided([[-1.5], [-2.5]], 2.5)
+[[-0.6], [-1.0]]
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6.7]], 9223372036854775807)
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
 ======Error to raise=========
 
 >>> matrix_divided(None, 2)
@@ -23,6 +29,11 @@ Traceback (most recent call last):
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 >>> matrix_divided([[1, 2, 3], [2]], 2)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided([[1, 2, 3], [4, 5, 6], [7]], 2)
 Traceback (most recent call last):
 ...
 TypeError: Each row of the matrix must have the same size
