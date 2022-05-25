@@ -30,7 +30,7 @@ Test -> 0-add_integer.py
 108
 
 ========ERROR string passed==========
->>> add_integer("num 20", 1002)
+>>> add_integer("num 20")
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
@@ -58,6 +58,11 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
+>>> print(add_integer(12,[""]))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
 
 =========Arguments Errors============
 >>> add_integer()
