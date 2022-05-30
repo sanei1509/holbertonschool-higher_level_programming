@@ -11,11 +11,10 @@ class Square(Rectangle):
     (IMPORT) si quisiera importarlo -> __import__(9_rectangle).Rectangle
     """
     def __init__(self, size):
-        """declaro, valido, inicializo"""
-        self.size = size
-        self.integer_validator("size", size)
-        super().__init__(size, size)
+        """valido, inicializo"""
+        self.__size = integer_validator("size", size)
+        super().__init__(size.__size, size__)
 
     def __str__(self):
         """reasigno __str__ con datos de square"""
-        return f"[Square] {self.size}/{self.size}"
+        return '[Square] ' + str(self.__size) + '/' + str(self.__size)
