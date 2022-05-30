@@ -11,7 +11,10 @@ class Square(Rectangle)
     reasignando a sus valores correspondientes
     """
     def __init__(self, size):
-        """Inicializo"""
-        self.size = size
-        self.integer_validator("size", size)
-        super().__init__(size, size)
+        """Inicialización y check con validator"""
+        self.__size = self.integer_validator("size", size)
+        """
+        accedo a las inicializaciones heredadas
+        y reasigno con valores correspondientes
+        """
+        super().__init__(self.__size, self.__size)
