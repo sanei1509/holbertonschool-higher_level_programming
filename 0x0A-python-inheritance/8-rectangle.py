@@ -12,5 +12,5 @@ class Rectangle(BaseGeometry):
     - used public instance method integer_validator()
     """
     def __init__(self, width, height):
-        self.__width = self.integer_validator("height", width)
-        self.__height = self.integer_validator("width", height)
+        self.__width = self.integer_validator("width", width)
+        self.__height = self.integer_validator("height", height)
