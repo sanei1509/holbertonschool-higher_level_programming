@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Task 4 - object isainstance of a class?
+Task 4 - object isainstance of a subclass?
 """
 
 
