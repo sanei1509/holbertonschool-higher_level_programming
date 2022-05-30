@@ -12,8 +12,8 @@ class Square(Rectangle):
     """
     def __init__(self, size):
         """valido, inicializo"""
-        self.__size = integer_validator("size", size)
-        super().__init__(size.__size, size__)
+        self.__size = self.integer_validator("size", size)
+        super().__init__(self.__size, self.__size)
 
     def __str__(self):
         """reasigno __str__ con datos de square"""
