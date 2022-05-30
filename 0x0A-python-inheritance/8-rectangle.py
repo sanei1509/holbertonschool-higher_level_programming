@@ -1,23 +1,9 @@
 #!/usr/bin/python3
 """
 Task 8 - based on 7-base_geometry.py
+instanciar (width) & (height) ya validados por nuestra function
 """
-
-
-class BaseGeometry:
-    """
-    public instance method (def area(self):)
-    public instance method (def integer_validator(self, name, value):)
-    """
-    def area(self):
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """checkear si value es un entero"""
-        if type(value) != int:
-            raise TypeError(f"{name} must be an integer")
-        if value <= 0:
-            raise ValueError(f"{name} must be greater than 0")
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
