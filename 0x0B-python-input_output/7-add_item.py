@@ -19,5 +19,4 @@ try:
 except FileNotFoundError:
     args_data = []
 
-args_data.extend(args)
-save_to_json_file(args_data, "add_item.json")
+save_to_json_file(args_data + args, "add_item.json")
