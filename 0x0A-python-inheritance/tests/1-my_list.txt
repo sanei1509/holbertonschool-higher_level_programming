@@ -3,8 +3,8 @@ Test to 1-my_list - module
 ***************************
 
 import:
->>> My_list = __import__("1-my_list").My_list
->>> my_list = My_list()
+>>> MyList = __import__("1-my_list").MyList
+>>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
 >>> my_list.append(2)
@@ -16,15 +16,15 @@ import:
 >>> print(my_list)
 [1, 4, 2, 3, 5]
 
->>>my_list = My_list("hello")
+>>> my_list = MyList("hello")
 
->>>my_list
+>>> my_list
 ['h', 'e', 'l', 'l', 'o']
 
->>>my_list.print_sorted()
+>>> my_list.print_sorted()
 ['e', 'h', 'l', 'l', 'o']
 
->>>my_list = My_list()
-[]
->>>my_list.print_sorted()
+>>> my_list = MyList()
+
+>>> my_list.print_sorted()
 []
