@@ -3,7 +3,7 @@
 task 7
 - Agregar todos los argumentos a una lista py
 ()
-y guardarlos en un archivo..
+y guardarlos en un archivo.. con permisos suficientes
 """
 import sys
 
