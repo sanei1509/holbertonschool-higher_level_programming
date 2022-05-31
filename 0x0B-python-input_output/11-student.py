@@ -33,7 +33,4 @@ class Student:
     def reload_from_json(self, json):
         """update all the attributtes of student"""
         for i in json:
-            self.__dict__.update({i : json[i]})
-
-
-    
+            self.__dict__.update({i: json[i]})
