@@ -16,7 +16,7 @@ args = list(sys.argv[1:])
 try:
     load_from_json_file("add_item.json")
 
-except Exception:
+except FileNotFoundError:
     args_data = []
 
 args_data.extend(args)
