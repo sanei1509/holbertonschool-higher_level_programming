@@ -20,4 +20,4 @@ class Student:
         """
         function that return the dictionaryfor JSON serialization of an object
         """
-        return obj.__dict__
+        return self.__dict__
