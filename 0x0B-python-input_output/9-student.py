@@ -16,7 +16,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(obj):
+    def to_json(self):
         """
         function that return the dictionaryfor JSON serialization of an object
         """
