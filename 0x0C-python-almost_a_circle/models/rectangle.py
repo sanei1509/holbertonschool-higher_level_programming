@@ -80,7 +80,11 @@ class Rectangle(Base):
 
     def display(self):
         """display the rectangle"""
+        for pos_y in range(self.__y):
+            print()
         for largo in range(self.__height):
+            for pos_x in range(self.__x):
+                print(" ", end="")
             for ancho in range(self.__width):
                 print("#", end="")
             print()
@@ -90,3 +94,13 @@ class Rectangle(Base):
         return (
             f"[Rectangle] ({s.id}) {s.__x}/{s.__y} - {s.__width}/{s.__height}"
             )
+    
+    def update(self, *args):
+        vars = [self.id, self.__width, self.__height, self.__x, self.__y]
+        i = 0
+        for arg in args:
+            print(vars[i])
+            vars[i]
+            i += 1
+            
+            
