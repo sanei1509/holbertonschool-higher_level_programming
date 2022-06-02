@@ -5,7 +5,7 @@ name of the project → ****# 0x07. Python - Test-driven development****
 ## Background Context
 en este proyecto juntaremos conceptos de python dados por separado en un solo trabajo.
 
-** These are the concept that we wiil see: **
+**These are the concept that we wiil see:**
 
 - Import
 - Exceptions
@@ -18,7 +18,7 @@ en este proyecto juntaremos conceptos de python dados por separado en un solo tr
 - Unittest
 - Read/Write file
 
-** the new concepts that we will see are: **
+**The new concepts that we will see are:**
 
 - args and kwargs
 - Serialization/Deserialization
