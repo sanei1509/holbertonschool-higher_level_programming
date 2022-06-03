@@ -28,3 +28,10 @@ class Base:
                 return json.dumps(list_dictionaries)
             else:
                 return []
+
+    def from_json_string(json_string):
+        """convert json string to object python"""
+        if json_string is not None and len(json_string) != 0:
+            return json.loads(json_string)
+        else:
+            return []
