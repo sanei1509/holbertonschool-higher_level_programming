@@ -95,17 +95,33 @@ class Rectangle(Base):
             f"[Rectangle] ({s.id}) {s.__x}/{s.__y} - {s.__width}/{s.__height}"
             )
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
+        """function to assing newly attrs"""
         i = 0
-        for arg in args:
-            if i == 0:
-                self.id = arg
-            if i == 1:
-                self.__width = arg
-            if i == 2:
-                self.__height = arg
-            if i == 3:
-                self.__x = arg
-            if i == 4:
-                self.__y = arg
-            i += 1
+        if args is not None and len(args) != 0:
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.__width = arg
+                if i == 2:
+                    self.__height = arg
+                if i == 3:
+                    self.__x = arg
+                if i == 4:
+                    self.__y = arg
+                i += 1
+        else:
+            if kwargs is not none and len(kwargs) != 0:
+                for key, value in kwargs.items():
+                    """print(f"{key}:{value}")"""
+                    if key == "id":
+                        self.id = value
+                    if key == "width":
+                        self.width = value
+                    if key == "height":
+                        self.height = value
+                    if key == "x":
+                        self.x = value
+                    if key == "y":
+                        self.y = value
