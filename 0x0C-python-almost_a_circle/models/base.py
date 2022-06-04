@@ -29,6 +29,23 @@ class Base:
             else:
                 return []
 
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """save list of objs(json string) in afile with variable name"""
+        name_of_file = f"{cls.__name__}.json"
+
+        print(name_of_file)
+        list_algo = []
+
+        if list_objs is not None and len(list_objs) != 0:
+            for algo in list_objs:
+                list_algo += [algo.to_dictionary()]
+
+        json_list = Base.to_json_string(list_algo)
+
+        with open(name_of_file, "w", encoding="UTF-8") as f:
+            f.write(json_list)
+
     def from_json_string(json_string):
         """convert json string to object python"""
         if json_string is not None and len(json_string) != 0:
