@@ -32,10 +32,8 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """save list of objs(json string) in afile with variable name"""
-        name_of_file = f"{cls.__name__}.json"
-
-        print(name_of_file)
         list_algo = []
+        name_of_file = f"{cls.__name__}.json"
 
         if list_objs is not None and len(list_objs) != 0:
             for algo in list_objs:
