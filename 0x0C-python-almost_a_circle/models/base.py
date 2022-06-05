@@ -50,3 +50,18 @@ class Base:
             return json.loads(json_string)
         else:
             return []
+    
+    @classmethod
+    def create(cls, **dictionary):
+        """create a new instance of Square or Rectangle"""
+        instance_dady = cls.__name__
+
+        if instance_dady == "Square":
+            dummy = cls(2)
+
+        if instance_dady == "Rectangle":
+            dummy = cls(2, 2)
+        
+        dummy.update(**dictionary)
+
+        return dummy
