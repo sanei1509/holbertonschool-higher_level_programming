@@ -28,8 +28,7 @@ class Base:
         if type(list_dictionaries) == list:
             if len(list_dictionaries) != 0 and list_dictionaries is not None:
                 return json.dumps(list_dictionaries)
-            else:
-                return []
+            return []
 
     @classmethod
     def save_to_file(cls, list_objs):
