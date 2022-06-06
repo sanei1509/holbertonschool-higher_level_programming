@@ -114,4 +114,4 @@ class test_case(unittest.TestCase):
 
         empty_list = None
         data_json = Base.to_json_string(empty_list)
-        self.assertEqual(data_json, None)
+        self.assertEqual(data_json, [])
