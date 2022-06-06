@@ -8,6 +8,7 @@ from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle
 
+
 class test_case(unittest.TestCase):
     """clase para pruebas"""
 
@@ -36,7 +37,7 @@ class test_case(unittest.TestCase):
         """id is negative ?"""
         b1 = Base(-2)
         self.assertEqual(b1.id, -2)
-    
+
     def test_str(self):
         """id is a string ?"""
         b1 = Base("naruto")
@@ -47,13 +48,12 @@ class test_case(unittest.TestCase):
         b1 = Base(False)
         self.assertEqual(b1.id, False)
 
-
     """argumentos"""
     def test_2args(self):
         """id have two args?"""
         with self.assertRaises(TypeError):
             Base(1, 2)
- 
+
     def test_none(self):
         """id no recibe argumentos?"""
         b1 = Base(None)
