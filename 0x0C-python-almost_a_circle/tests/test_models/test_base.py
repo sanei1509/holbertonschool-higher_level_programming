@@ -64,3 +64,54 @@ class test_case(unittest.TestCase):
         """es una instancia de Base?"""
         b1 = Base()
         self.assertEqual(type(b1), Base)
+
+    """METODOS / FUNCIONES"""
+    def test_convert_to_jsonStr(self):
+        """convierte a json string nuestra funcion ?"""
+        instance1 = Rectangle(7, 2, 8, 2, 10)
+        dict_data = instance1.to_dictionary()
+        in_json = Base.to_json_string([dict_data])
+        self.assertEqual(type(in_json), str)
+
+    def test_load_from_file(self):
+        """
+        convierte un texto a obj desde un archivo ?
+        """
+        if os.path.exists("Base.json"):
+            os.remove("Base.json")
+
+        if os.path.exists("Rectangle.json"):
+            os.remove("Rectangle.json")
+
+        if os.path.exists("Square.json"):
+            os.remove("Square.json")
+
+        salida_rectangle = Rectangle.load_from_file()
+        self.assertEqual(salida_rectangle, [])
+
+        salida_square = Square.load_from_file()
+        self.assertEqual(salida_square, [])
+
+        error = "load_from_file() takes 1 positional argument but 2 were given"
+        with self.assertRaises(TypeError) as e:
+            Rectangle.load_from_file('Naruto file')
+
+        self.assertEqual(error, str(e.exception))
+
+    def test_save_to_file(self):
+        """test save_to_file function"""
+        err = "'Base' object has no attribute 'to_dictionary'"
+
+        with self.assertRaises(AttributeError) as e:
+            Base.save_to_file([Base(2)])
+        self.assertEqual(err, str(e.exception))
+
+    def test_err_json_string(self):
+        """to_json_string receive empty or none"""
+        empty_list = []
+        in_json = Base.to_json_string(empty_list)
+        self.assertEqual(in_json, [])
+
+        empty_list = None
+        data_json = Base.to_json_string(empty_list)
+        self.assertEqual(data_json, None)
