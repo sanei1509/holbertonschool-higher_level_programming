@@ -110,8 +110,8 @@ class test_case(unittest.TestCase):
         """to_json_string receive empty or none"""
         empty_list = []
         in_json = Base.to_json_string(empty_list)
-        self.assertEqual(in_json, [])
+        self.assertEqual(in_json, "[]")
 
         empty_list = None
         data_json = Base.to_json_string(empty_list)
-        self.assertEqual(data_json, [])
+        self.assertEqual(data_json, "[]")
