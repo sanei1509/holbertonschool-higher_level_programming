@@ -101,6 +101,8 @@ class Rectangle(Base):
         if args is not None and len(args) != 0:
             for arg in args:
                 if i == 0:
+                    if type(arg) != int and arg is not None:
+                        raise TypeError("id must be an integer")
                     self.id = arg
                 if i == 1:
                     self.__width = arg
@@ -116,6 +118,8 @@ class Rectangle(Base):
                 for key, value in kwargs.items():
                     """print(f"{key}:{value}")"""
                     if key == "id":
+                        if type(value) != int and value is not None:
+                            raise TypeError("id must be an integer")
                         self.id = value
                     if key == "width":
                         self.width = value
