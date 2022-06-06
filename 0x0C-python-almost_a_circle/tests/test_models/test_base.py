@@ -59,11 +59,21 @@ class test_case(unittest.TestCase):
         b1 = Base(None)
         self.assertEqual(b1.id, 2)
 
+    def test_class_type(self):
+        """aseguramos que sean de tipo clase"""
+        self.assertEqual(str(type(Base)), "<class 'type'>")
+        self.assertEqual(str(type(Rectangle)), "<class 'type'>")
+        self.assertEqual(str(type(Square)), "<class 'type'>")
+
     """clase de instancia(BASE)"""
     def test_base_class(self):
         """es una instancia de Base?"""
         b1 = Base()
         self.assertEqual(type(b1), Base)
+        self.assertEqual(issubclass(Rectangle, Base), True)
+        self.assertEqual(issubclass(Square, Base), True)
+        self.assertEqual(issubclass(Rectangle, Square), False)
+        self.assertEqual(issubclass(Square, Rectangle), True)
 
     """METODOS / FUNCIONES"""
     def test_convert_to_jsonStr(self):
@@ -72,6 +82,10 @@ class test_case(unittest.TestCase):
         dict_data = instance1.to_dictionary()
         in_json = Base.to_json_string([dict_data])
         self.assertEqual(type(in_json), str)
+        """le pasamos None"""
+        new_dict = None
+        in_json = Base.to_json_string([new_dict])
+        self.assertEqual(in_json, '[null]')
 
     def test_load_from_file(self):
         """
@@ -105,6 +119,11 @@ class test_case(unittest.TestCase):
         with self.assertRaises(AttributeError) as e:
             Base.save_to_file([Base(2)])
         self.assertEqual(err, str(e.exception))
+
+    def test_save_to_file_err(self):
+        """testeamos la funcion save to file"""
+        with self.assertRaises(AttributeError):
+            Base.save_to_string()
 
     def test_err_json_string(self):
         """to_json_string receive empty or none"""
