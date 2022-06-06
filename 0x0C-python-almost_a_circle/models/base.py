@@ -25,10 +25,9 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """transform object py to json string"""
-        if type(list_dictionaries) == list:
-            if len(list_dictionaries) != 0 or list_dictionaries is not None:
-                return json.dumps(list_dictionaries)
-            return []
+        if len(list_dictionaries) != 0 or list_dictionaries is not None:
+            return json.dumps(list_dictionaries)
+        return []
 
     @classmethod
     def save_to_file(cls, list_objs):
