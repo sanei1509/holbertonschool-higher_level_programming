@@ -30,13 +30,13 @@ class Test_case(unittest.TestCase):
     def test_str_func(self):
         """Probando la función __str__"""
         t1 = Square(10)
-        self.assertEqual(str(t1), "[Square] (3) 0/0 - 10")
+        self.assertEqual(str(t1), "[Square] (10) 0/0 - 10")
 
         t1 = Square(10, 6)
-        self.assertEqual(str(t1), "[Square] (4) 6/0 - 10")
+        self.assertEqual(str(t1), "[Square] (11) 6/0 - 10")
 
         t1 = Square(10, 5, 9)
-        self.assertEqual(str(t1), "[Square] (5) 5/9 - 10")
+        self.assertEqual(str(t1), "[Square] (12) 5/9 - 10")
 
         t1 = Square(5, 10, 4, 14)
         self.assertEqual(str(t1), "[Square] (14) 10/4 - 5")
