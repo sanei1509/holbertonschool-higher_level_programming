@@ -19,7 +19,7 @@ class test_case(unittest.TestCase):
             Rectangle(2.1, 1, 2 , 5)
 
         with self.assertRaises(TypeError):
-            Rectangle(2, 3,14, 4, 5)
+            Rectangle(2, 3.14, 4, 5)
 
     def test_Nan(self):
         """width or height is NaN"""
@@ -35,7 +35,7 @@ class test_case(unittest.TestCase):
         r1 = Rectangle(5, 2, 1, 8)
         r1_dict = r1.to_dictionary()
         other_dict = {'x': 1, 'y': 8, 'id': 1, 'height': 2, 'width': 5}
-        self.assertEqual(len(r1_dictionary), len(other_dict))
+        self.assertEqual(len(r1_dict), len(other_dict))
         self.assertEqual(type(r1_dict), dict)
 
     """AREA"""
