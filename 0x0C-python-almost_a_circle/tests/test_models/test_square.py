@@ -75,5 +75,5 @@ class Test_case(unittest.TestCase):
             test1 = Square(2, 2, -33)
         with self.assertRaises(ValueError):
             test1 = Square(0)
-                with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError):
             test1 = Square(-20)             
