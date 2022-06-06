@@ -4,6 +4,8 @@ Task 1 :
 private class attr, constructor, validate
 """
 import json
+import os
+"""para verificar que exista un archivo(path.exists())"""
 
 
 class Base:
@@ -50,7 +52,7 @@ class Base:
             return json.loads(json_string)
         else:
             return []
-    
+
     @classmethod
     def create(cls, **dictionary):
         """create a new instance of Square or Rectangle"""
@@ -61,7 +63,24 @@ class Base:
 
         if instance_dady == "Rectangle":
             dummy = cls(2, 2)
-        
+
         dummy.update(**dictionary)
 
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """list of instances in a file"""
+        ins_list = []
+        name_of_file = f"{cls.__name__}.json"
+
+        if os.path.exists(name_of_file) is False:
+            return ins_list
+
+        with open(name_of_file, mode="r", encoding="utf-8") as f:
+            dicts = cls.from_json_string(f.read())
+
+            for data in dicts:
+                ins_list.append(cls.create(**data))
+
+            return ins_list
