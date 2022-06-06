@@ -5,15 +5,15 @@ private class attr, constructor, validate
 """
 import json
 import os
-"""para verificar que exista un archivo(path.exists())"""
 
 
 class Base:
-    __nb_objects = 0
     """
     Clase base
     I need access to my class to modify private clas
     """
+    __nb_objects = 0
+
     def __init__(self, id=None):
         """"initialize"""
         if id is None:
@@ -46,6 +46,7 @@ class Base:
         with open(name_of_file, "w", encoding="UTF-8") as f:
             f.write(json_list)
 
+    @staticmethod
     def from_json_string(json_string):
         """convert json string to object python"""
         if json_string is not None and len(json_string) != 0:
