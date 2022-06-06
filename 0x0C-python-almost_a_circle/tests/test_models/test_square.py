@@ -8,6 +8,9 @@ from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle
 
-def test_case(unittest.TestCase):
+class Test_case(unittest.TestCase):
     """clase para pruebas"""
-    
+    def test_normal(self):
+        """size of Square"""
+        s1 = Square(2)
+        self.assertEqual(s1.size, 2)
