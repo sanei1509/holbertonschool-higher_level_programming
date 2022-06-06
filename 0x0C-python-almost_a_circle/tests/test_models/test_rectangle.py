@@ -8,6 +8,7 @@ from models.base import Base
 from models.square import Square
 from models.rectangle import Rectangle
 
+
 class test_case(unittest.TestCase):
     """clase para pruebas"""
     def test_normal_id(self):
@@ -137,6 +138,7 @@ class test_case(unittest.TestCase):
         self.assertTrue(isinstance(r1, Base))
 
     def test_type_errors(self):
+        """chequeo de errores de tipo"""
         with self.assertRaises(TypeError):
             test1 = Rectangle()
         with self.assertRaises(TypeError):
@@ -158,4 +160,4 @@ class test_case(unittest.TestCase):
         with self.assertRaises(TypeError):
             test1 = Rectangle(5, {'hola': 4})
         with self.assertRaises(TypeError):
-            test1 = Rectangle(2, 2, [2, 2])        
+            test1 = Rectangle(2, 2, [2, 2])
