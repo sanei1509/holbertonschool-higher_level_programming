@@ -5,6 +5,7 @@ private class attr, constructor, validate
 """
 import json
 import os
+import csv
 
 
 class Base:
@@ -84,3 +85,47 @@ class Base:
                 ins_list.append(cls.create(**data))
 
             return ins_list
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        save csv attr in format csv into file
+        (if exitsts)
+        """
+        inst_name = cls.__name__
+        name_of_file = inst_name + ".csv"
+
+        if inst_name == "Rectangle":
+            if list_objs is not None:
+                with open(name_of_file, mode="w", newline='') as f:
+                    w = csv.writer(f)
+                    for i in list_objs:
+                        w.writerow([i.id, i.width, i.height, i.x, i.y])
+
+        if inst_name == "Square":
+            if list_objs is not None:
+                with open(name_of_file, mode="w", newline='') as f:
+                    l_writer = csv.writer(f)
+                    for inst in list_objs:
+                        l_writer.writerow([inst.id, inst.size, inst.x, inst.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """create a list of instances from a file with csv format"""
+        inst_name = cls.__name__
+        name_of_file = inst_name + ".csv"
+        res_list = []
+
+        with open(name_of_file, mode="r") as f:
+            file_read = csv.reader(f)
+            for ins in file_read:
+                if inst_name == 'Rectangle':
+                    dict = {"id": int(ins[0]), "width": int(ins[1]),
+                            "height": int(ins[2]), "x": int(ins[3]),
+                            "y": int(ins[4])}
+                if inst_name == 'Square':
+                    dict = {"id": int(ins[0]), "size": int(ins[1]),
+                            "x": int(ins[2]), "y": int(ins[3])}
+                res_list.append(cls.create(**dict))
+
+        return res_list
