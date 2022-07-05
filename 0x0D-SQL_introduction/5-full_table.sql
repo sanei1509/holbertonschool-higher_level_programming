@@ -1,2 +1,2 @@
 -- Mostrar la descripcion completa de una tabla
-DESCRIBE first_table;
+SHOW COLUMN FROM first_table;
