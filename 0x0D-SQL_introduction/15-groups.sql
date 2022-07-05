@@ -1,2 +1,2 @@
 -- Listar el numero de registros con el mismo score
-SELECT score, number FROM second_table GROUP BY score;
+SELECT score, count(*) as number FROM second_table GROUP BY score ORDER BY DESC;
