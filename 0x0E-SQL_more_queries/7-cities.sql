@@ -1,4 +1,5 @@
 -- Crear una database 'hbtn_0d_usa' y la tabla 'cities' (en la base de datos hbtn_0d_usa) en la MySQL
+-- La Foreign key referencia a una al valor id de 'states' 
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 CREATE TABLE IF NOT EXISTS hbtn_0d_usa.cities(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT UNIQUE,
