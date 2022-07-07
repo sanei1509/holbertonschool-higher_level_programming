@@ -1,5 +1,6 @@
 -- misma database cargada de las anteriores tareas
--- task 18 advanced
+-- task 18 advanced:
+-- listar las peliculas que no tengan comedia como genero
 SELECT DISTINCT tv_shows.title AS title
 FROM tv_shows
 WHERE tv_shows.title NOT IN(
