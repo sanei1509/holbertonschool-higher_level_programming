@@ -1,7 +1,7 @@
 #!/usr/bin/node
 arg = process.argv[2];
 
-if (isNaN(Number(arg)))
+if (isNaN(arg))
 	console.log("Not a number");
 else
-	console.log(Number(arg));
+	console.log(parseInt(arg));
