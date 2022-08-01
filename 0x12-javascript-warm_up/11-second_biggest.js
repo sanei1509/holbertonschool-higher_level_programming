@@ -2,7 +2,7 @@
 
 /* obtener el segundo valor más grande */
 const argv = process.argv;
-const ordArr = [];
+let ordArr = [];
 
 if (argv.length <= 3) { console.log(0); } else {
   for (let i = 2; i < argv.length; i++) {
@@ -12,6 +12,6 @@ if (argv.length <= 3) { console.log(0); } else {
 }
 
 if (ordArr.length > 1) {
-  ordArr.sort();
+  ordArr = ordArr.sort();
   console.log(ordArr[ordArr.length - 2]);
 }
