@@ -7,8 +7,7 @@ const ordArr = [];
 if (argv.length <= 3) { console.log(0); } else {
   for (let i = 2; i < argv.length; i++) {
     const num = parseInt(argv[i]);
-    if (isNaN(num)) { continue; }
-    ordArr.push(num);
+    if (isNaN(num)) { continue; } else { ordArr.push(num); }
   }
 }
 
