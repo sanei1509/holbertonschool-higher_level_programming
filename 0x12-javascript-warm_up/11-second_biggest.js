@@ -14,6 +14,5 @@ if (argv.length <= 3) { console.log(0); } else {
 if (ordArr.length > 1) {
   ordArr = [...new Set(ordArr)];
   ordArr = ordArr.sort(function (a, b) { return a - b; });
-  console.log(ordArr);
   console.log(ordArr[ordArr.length - 2]);
 }
