@@ -3,8 +3,8 @@
 const num = parseInt(process.argv[2]);
 
 function factorial (num) {
-  if (isNaN(num))
-	return 1;
-  else 
-	return num * factorial(x - 1);
+  if (num <= 1 || isNaN(num)) { return 1; } else { return num * factorial(num - 1); }
 }
+
+console.log(factorial('sadasd'));
+console.log(factorial(num));
