@@ -2,5 +2,5 @@
 
 /*Js script que escriba en consola myVar*/
 
-const myVar = "JavaScript is amazing";
+const myVar = 'JavaScript is amazing';
 console.log(myVar);
