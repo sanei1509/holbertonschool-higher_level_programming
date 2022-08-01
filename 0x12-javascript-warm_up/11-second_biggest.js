@@ -12,7 +12,7 @@ if (argv.length <= 3) { console.log(0); } else {
   }
 }
 
-if (ordArr.length > 1) {
+if (ordArr.length) {
   ordArr.sort();
   console.log(ordArr[ordArr.length - 2]);
 }
