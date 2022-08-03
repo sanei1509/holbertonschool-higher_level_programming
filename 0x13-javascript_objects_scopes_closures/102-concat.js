@@ -10,10 +10,10 @@ const srcThird = args[4];
 
 fs.readFile(srcFirst, (err, data) => {
   if (err) throw err;
-  fs.writeFile(srcThird, data.toString() + '\n', (err) => { if (err) throw err; });
+  fs.appendFile(srcThird, data.toString(), (err) => { if (err) throw err; });
 });
 
 fs.readFile(srcSecond, (err, data) => {
   if (err) throw err;
-  fs.appendFile(srcThird, data.toString() + '\n', (err) => { if (err) throw err; });
+  fs.appendFile(srcThird, data.toString(), (err) => { if (err) throw err; });
 });
