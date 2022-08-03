@@ -15,5 +15,5 @@ fs.readFile(srcFirst, (err, data) => {
 
 fs.readFile(srcSecond, (err, data) => {
   if (err) throw err;
-  fs.appendFile(srcThird, data.toString(), (err) => { if (err) throw err; });
+  fs.appendFile(srcThird, data.toString() + '\n', (err) => { if (err) throw err; });
 });
