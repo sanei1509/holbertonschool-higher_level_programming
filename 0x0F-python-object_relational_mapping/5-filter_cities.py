@@ -22,7 +22,7 @@ text = ""
 cont = 0
 for row in query_rows:
     cont += 1
-    if cont < 3:
+    if cont < len(query_rows):
         text += row[0]+', '
     else:
         text += row[0]
