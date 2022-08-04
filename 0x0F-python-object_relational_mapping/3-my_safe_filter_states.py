@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""mostrar los valores donde la tabla coincidad con el argumnento"""
+"""Prevenir la inyection of code in the task 3"""
 
 import MySQLdb
 import sys
