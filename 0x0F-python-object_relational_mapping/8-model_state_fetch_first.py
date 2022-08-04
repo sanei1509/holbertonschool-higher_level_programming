@@ -18,7 +18,7 @@ if __name__ == "__main__":
     for state in session.query(State).order_by(State.id).all():
         # HERE: no SQL query, only objects!
         cont += 1
-        if cont == 1:
+        if cont <=  1:
             print("{}: {}".format(state.id, state.name))
         if cont == 0:
             print()
