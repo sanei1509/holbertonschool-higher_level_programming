@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script que imprima el 1er State de 'hbtn_0e_6_usa' """
+"""Listar todos los State que contenga una letra "a" """
 
 import sys
 from model_state import Base, State
