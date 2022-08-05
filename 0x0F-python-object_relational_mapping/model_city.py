@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Definir una nueva clase City - similar State"""
+"""Modelando una nueva tabla cities"""
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
 
