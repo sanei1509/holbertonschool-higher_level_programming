@@ -11,3 +11,7 @@ class City(Base):
                 nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
+
+    def __str__(self):
+        """formato a mostrar al print (instance)"""
+        return f"{self.id}: {self.name}"
