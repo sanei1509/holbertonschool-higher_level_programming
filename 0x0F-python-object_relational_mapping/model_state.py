@@ -16,4 +16,5 @@ class State(Base):
     name = Column(String(128), nullable=False)
 
     def __str__(self):
+        """formato a mostrar al print (instance)"""
         return f"{self.id}: {self.name}"
