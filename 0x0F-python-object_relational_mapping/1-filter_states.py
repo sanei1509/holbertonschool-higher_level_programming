@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 "Listar todos los estados con nombres que empiecen con N de hbtn_0e_0_usa"
-import MySQLdb
-import sys
+
 
 if __name__ == "__main__":
+    import sys
+    import MySQLdb
     """No se ejecuta cuando es importado"""
 
     mysql_username = sys.argv[1]
