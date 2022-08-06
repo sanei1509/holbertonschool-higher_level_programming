@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """mostrar los valores donde la tabla coincidad con el argumnento"""
 
-import MySQLdb
-import sys
 if __name__ == "__main__":
+    import sys
+    import MySQLdb
     """No se ejecuta cuando es importado"""
     user = sys.argv[1]
     passw = sys.argv[2]
