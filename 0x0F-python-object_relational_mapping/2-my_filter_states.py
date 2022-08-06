@@ -10,7 +10,7 @@ if __name__ == "__main__":
                            user=argv[1], passwd=argv[2], db=argv[3],
                            charset="utf8")
     cur = conn.cursor()
-    cur.execute(f"SELECT * FROM states WHERE name LIKE '{state_name}'\
+    cur.execute(f"SELECT * FROM states WHERE name = '{state_name}'\
                 ORDER BY states.id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
