@@ -6,13 +6,13 @@ import MySQLdb
 
 if __name__ == "__main__":
     """No se ejecuta al ser importado"""
-    username = argv[1]
+    user = argv[1]
     password = argv[2]
-    database = argv[3]
+    db_name = argv[3]
     state_name = argv[4]
 
-    conn = MySQLdb.connect(host='localhost', port=3306, user=username,
-                           passwd=password, db=database,
+    conn = MySQLdb.connect(host='localhost', port=3306, user=user,
+                           passwd=password, db=db_name,
                            charset="utf8")
     cur = conn.cursor()
     cur.execute(f"SELECT *FROM states WHERE name = %s\
