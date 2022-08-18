@@ -1,3 +1,3 @@
 #!/bin/bash
-#DELETE request to the URL of the header
+#DELETE a la url pasada, muestra el cuerpo de la respuesta
 curl -sX DELETE "$1"
