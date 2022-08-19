@@ -4,6 +4,7 @@ scrip que haga un fetch manejando los errores (try, except)
 """
 if __name__ == "__main__":
     import requests
+    import sys
 
     url = "https://intranet.hbtn.io/status"
 
