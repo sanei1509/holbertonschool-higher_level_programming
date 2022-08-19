@@ -18,6 +18,5 @@ if __name__ == "__main__":
     for commit in json_commits[:10]:
         # if cont < 10:
         print(commit["sha"], end=": ")
-            # print(commit["commit"]["author"]["name"])
-        print(commit.get('commit').get('author').get('name'))
+        print(commit["commit"]["author"]["name"])
         # cont += 1
