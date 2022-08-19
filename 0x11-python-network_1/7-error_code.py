@@ -7,9 +7,8 @@ if __name__ == "__main__":
 
     url = "https://intranet.hbtn.io/status"
 
-    try:
-        data_req = requests.get(url)
-        if data_req.status_code >= 400:
-            print("Error code: {}".format(data_req.status_code))
-        else:
-            print(data_req.text)
+    data_req = requests.get(url)
+    if data_req.status_code >= 400:
+        print("Error code: {}".format(data_req.status_code))
+    else:
+        print(data_req.text)
