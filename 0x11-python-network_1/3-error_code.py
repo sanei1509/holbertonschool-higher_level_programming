@@ -13,4 +13,4 @@ if __name__ == "__main__":
             content = response.read()
             content.decode()
     except URLError as err:
-        print("Error code: ", err.code)
+        print("Error code:", err.code)
