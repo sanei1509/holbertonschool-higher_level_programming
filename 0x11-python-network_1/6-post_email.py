@@ -8,6 +8,6 @@ if __name__ == "__main__":
 
     url = sys.argv[1]
     email = sys.argv[2]
-    data_req = requests.post(url, data={"email": "hr@holbertonschool.com"})
+    data_req = requests.post(url, {"email": email})
 
     print(data_req.text)
