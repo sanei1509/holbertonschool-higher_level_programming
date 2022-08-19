@@ -11,6 +11,6 @@ if __name__ == "__main__":
     try:
         with urllib.request.urlopen(url) as response:
             content = response.read()
-            content.decode()
+            print(content.decode())
     except URLError as err:
         print("Error code:", err.code)
