@@ -6,7 +6,7 @@ if __name__ == "__main__":
     import requests
     import sys
 
-    url = "https://intranet.hbtn.io/status"
+    url = sys.argv[1]
 
     data_req = requests.get(url)
     if data_req.status_code >= 400:
