@@ -16,7 +16,7 @@ const mostrarPersonajes = async () =>{
 		const movie = await axios.get(url);
 
 		// DE LA PELICULA NECESITAMOS LOS PERSONAJES
-		const personajes = res.data.characters;
+		const personajes = movie.data.characters;
 		// ITERAMOS TODOS LOS PERSONAJES DE LA PELICULA
 		for (const personaje of personajes) {
 			const content = await axios.get(personaje);
