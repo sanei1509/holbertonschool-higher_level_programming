@@ -13,5 +13,7 @@ const fileStore = process.argv[3];
 
 axios.get(url).then((res) => {
   const contenido = res.data;
-  fs.writeFile(fileStore, contenido);
+  fs.writeFile(fileStore, contenido, (err) => {
+    console.log(err);
+  });
 });
