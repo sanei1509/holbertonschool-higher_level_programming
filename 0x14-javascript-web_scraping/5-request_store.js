@@ -11,9 +11,11 @@ const fs = require('fs');
 const url = process.argv[2];
 const fileStore = process.argv[3];
 
-axios.get(url).then((res) => {
-  const contenido = res.data;
-  fs.writeFile(fileStore, contenido, (err) => {
-    console.log(err);
+axios.get(url)
+  .then((res) => {
+    const contenido = res.data;
+
+    fs.writeFile(fileStore, contenido, err => {
+      console.log(err);
+    });
   });
-});
