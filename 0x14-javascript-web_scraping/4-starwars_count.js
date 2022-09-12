@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /* crear un script que imprima la cantidad de peliculas con el actor 18
-- del episodio pasado por parametros
+- de todas las peliculas
 - usando axios
 - url -> https://swapi-api.hbtn.io/api/films/:id
 */
