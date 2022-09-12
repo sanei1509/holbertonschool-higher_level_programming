@@ -8,24 +8,23 @@ const axios = require('axios').default;
 const id = process.argv[2];
 const url = `https://swapi-api.hbtn.io/api/films/${id}`;
 
-
 // DEBEMOS USAR ASYNC
-const mostrarPersonajes = async () =>{
-	try {
-		// SOLICITAMOS LA URL ESPECIFICA (PELICULA)
-		const movie = await axios.get(url);
+const mostrarPersonajes = async () => {
+  try {
+    // SOLICITAMOS LA URL ESPECIFICA (PELICULA)
+    const movie = await axios.get(url);
 
-		// DE LA PELICULA NECESITAMOS LOS PERSONAJES
-		const personajes = movie.data.characters;
-		// ITERAMOS TODOS LOS PERSONAJES DE LA PELICULA
-		for (const personaje of personajes) {
-			const content = await axios.get(personaje);
-			// MOSTRAMOS CADA PERSONAJES
-			console.log(content.data.name);
-		};
-	} catch (err){
-		console.log(err);
-	}
-}
+    // DE LA PELICULA NECESITAMOS LOS PERSONAJES
+    const personajes = movie.data.characters;
+    // ITERAMOS TODOS LOS PERSONAJES DE LA PELICULA
+    for (const personaje of personajes) {
+      const content = await axios.get(personaje);
+      // MOSTRAMOS CADA PERSONAJES
+      console.log(content.data.name);
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 mostrarPersonajes();
