@@ -16,6 +16,6 @@ axios.get(url)
     const contenido = res.data;
 
     fs.writeFile(fileStore, contenido, err => {
-      console.log(err);
+      console.error(err);
     });
   });
